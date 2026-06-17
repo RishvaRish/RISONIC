@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RISONIC | Shape of Sound</title>
+    <meta name="description" content="AURA by RISONIC - Precision-engineered audio, sculpted for the extraordinary.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Phosphor Icons for elegant line icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <!-- GSAP for Cinematic Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <!-- 1. NAVIGATION -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#" class="brand-logo">RISONIC</a>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#product">Product</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+            <a href="#cta" class="btn btn-primary">Buy Now</a>
+            <div class="mobile-menu-toggle">
+                <i class="ph ph-list"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 2. HERO SECTION -->
+    <section id="hero-pin-container" class="hero-flagship">
+        <div class="hero-typography-bg">
+            <div class="mask-wrapper"><h1 class="hero-bg-text mask-text">RISONIC</h1></div>
+        </div>
+        
+        <div class="hero-centerpiece">
+            <div class="product-badge">
+                <span class="badge-star">★</span> 4.9 <span class="badge-text">256 Reviews</span>
+            </div>
+            <img src="./assets/aura_speaker_transparent.png" alt="RISONIC AURA Speaker" class="hero-center-image">
+        </div>
+
+        <div class="hero-glass-bar">
+            <div class="glass-content">
+                <p class="hero-glass-subtitle">Precision-engineered audio, sculpted for the extraordinary.</p>
+                <div class="hero-actions">
+                    <a href="#cta" class="btn btn-primary">Buy Now</a>
+                    <a href="#features" class="btn btn-secondary glass-btn">Explore</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CINEMATIC SCROLL TEXT -->
+    <section class="cinematic-text-section">
+        <div class="cinematic-text-container">
+            <div class="cinematic-line line-left">The AURA — our finest creation</div>
+            <div class="cinematic-line line-right">in sculptural sound design</div>
+            <div class="cinematic-line line-left">precision-engineered for the</div>
+            <div class="cinematic-line line-right">extraordinary listener</div>
+        </div>
+    </section>
+
+    <!-- 3. KEY FEATURES / SPECS -->
+    <section id="features" class="features-section">
+        <div class="features-grid">
+            <div class="feature-card">
+                <i class="ph-fill ph-waves feature-icon"></i>
+                <h3 class="feature-label">360° Spatial Sound</h3>
+                <p class="feature-desc">Immersive audio from every angle.</p>
+            </div>
+            <div class="feature-card">
+                <i class="ph-fill ph-drop feature-icon"></i>
+                <h3 class="feature-label">IPX7 Waterproof</h3>
+                <p class="feature-desc">Built to withstand the elements.</p>
+            </div>
+            <div class="feature-card">
+                <i class="ph-fill ph-bluetooth-connected feature-icon"></i>
+                <h3 class="feature-label">Bluetooth 5.4</h3>
+                <p class="feature-desc">Seamless, high-fidelity connection.</p>
+            </div>
+            <div class="feature-card">
+                <i class="ph-fill ph-battery-charging feature-icon"></i>
+                <h3 class="feature-label">30H Battery</h3>
+                <p class="feature-desc">All-day playback on a single charge.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. PRODUCT SHOWCASE -->
+    <section id="product" class="showcase-section">
+        <div class="showcase-row">
+            <div class="showcase-visual">
+                <img src="./assets/aura_speaker.png" alt="Sculpted Design" class="showcase-image">
+            </div>
+            <div class="showcase-content">
+                <span class="section-label">Design</span>
+                <h2 class="section-title">Sculpted for Perfection</h2>
+                <p class="section-text">Inspired by the nautilus shell, the AURA's spiral design is more than an aesthetic choice. It’s an acoustic chamber designed to eliminate resonance and deliver pure, uncolored sound. Every curve is intentional, blending art with engineering.</p>
+            </div>
+        </div>
+
+        <div class="showcase-row reverse">
+            <div class="showcase-visual">
+                <img src="./assets/aura_speaker.png" alt="360 Sound" class="showcase-image">
+            </div>
+            <div class="showcase-content">
+                <span class="section-label">Acoustics</span>
+                <h2 class="section-title">Sound Without Boundaries</h2>
+                <p class="section-text">Experience a soundstage that fills the room. By projecting audio radially, AURA ensures that no matter where you stand, you are in the sweet spot. Deep bass, crystalline highs, and an expansive midrange.</p>
+            </div>
+        </div>
+
+        <div class="showcase-row">
+            <div class="showcase-visual">
+                <img src="./assets/aura_speaker.png" alt="Durability" class="showcase-image">
+            </div>
+            <div class="showcase-content">
+                <span class="section-label">Durability</span>
+                <h2 class="section-title">Built for Every Adventure</h2>
+                <p class="section-text">Don't let the elegant exterior fool you. AURA is encased in an anodized aluminum and reinforced polymer shell. Fully waterproof and dustproof, it's ready for the elements, wherever your music takes you.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4.5. LIFESTYLE SECTION -->
+    <section id="lifestyle" class="lifestyle-section">
+        <div class="lifestyle-card">
+            <div class="ls-header">
+                <span class="section-label" style="color: #4A4A4A;">LIFESTYLE</span>
+                <h2 class="section-title">Key Features</h2>
+                <p class="section-text">Crystal-clear audio, deep bass, and 24-hour battery life — your music, anywhere you go.</p>
+            </div>
+            
+            <div class="ls-stats-grid">
+                <div class="ls-stat-item">
+                    <h3 class="stat-value">360° Spatial Audio</h3>
+                    <h4 class="stat-label">Immersive Sound</h4>
+                    <p class="stat-desc">Hi-Fi drivers with adaptive room calibration — automatically tuned to your environment for perfect acoustics anywhere.</p>
+                </div>
+                <div class="ls-stat-item">
+                    <h3 class="stat-value">IPX7 + Dustproof</h3>
+                    <h4 class="stat-label">Built Tough</h4>
+                    <p class="stat-desc">Fully waterproof and dustproof — beach, pool, rain or adventure, AURA performs flawlessly.</p>
+                </div>
+                <div class="ls-stat-item">
+                    <h3 class="stat-value">Bluetooth 5.4</h3>
+                    <h4 class="stat-label">Wireless Connectivity</h4>
+                    <p class="stat-desc">Ultra-stable, low-latency connection with 30m range and multipoint pairing — connect two devices simultaneously.</p>
+                </div>
+                <div class="ls-stat-item">
+                    <h3 class="stat-value">30H Battery</h3>
+                    <h4 class="stat-label">All-Day Play</h4>
+                    <p class="stat-desc">Industry-leading 30-hour playtime with fast charge — 15 minutes gives you 3 hours of playback.</p>
+                </div>
+            </div>
+
+            <div class="ls-image-strip">
+                <img src="./assets/lifestyle_dance.png" alt="Dance" class="ls-img img-1">
+                <img src="./assets/lifestyle_yoga.png" alt="Yoga" class="ls-img img-2">
+                <img src="./assets/lifestyle_beach.png" alt="Beach" class="ls-img img-3">
+                <img src="./assets/lifestyle_home.png" alt="Home" class="ls-img img-4">
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. ABOUT THE BRAND -->
+    <section id="about" class="about-section">
+        <div class="about-container">
+            <div class="about-content">
+                <h2 class="section-title">Crafted with Obsession.</h2>
+                <p class="section-text">"RISONIC was born from a simple belief — that sound deserves a form as extraordinary as the music it carries. Every curve of the AURA is intentional. Every frequency, refined."</p>
+                <div class="founder-info">
+                    <div class="founder-avatar logo-mark">R</div>
+                    <span class="founder-name">Rishva — Founder, RISONIC</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. TESTIMONIALS -->
+    <section id="reviews" class="testimonials-section">
+        <div class="section-header">
+            <span class="section-label">Reviews</span>
+            <h2 class="section-title">What Listeners Say</h2>
+        </div>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="quote">"An absolute masterpiece of design and audio engineering. It looks like a sculpture in my living room, but sounds like a live concert."</p>
+                <div class="reviewer">
+                    <span class="reviewer-name">Sarah Jenkins</span>
+                    <span class="reviewer-date">Oct 12, 2025</span>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="quote">"The 360-degree sound is no gimmick. I can walk around my entire studio and the clarity remains perfect. Worth every penny."</p>
+                <div class="reviewer">
+                    <span class="reviewer-name">Marcus Reed</span>
+                    <span class="reviewer-date">Sep 28, 2025</span>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="quote">"Finally, a Bluetooth speaker that doesn't look like a plastic brick. The build quality is exceptional, and the battery lasts for days."</p>
+                <div class="reviewer">
+                    <span class="reviewer-name">Elena Costa</span>
+                    <span class="reviewer-date">Sep 05, 2025</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. BLOG -->
+    <section id="blog" class="blog-section">
+        <div class="section-header">
+            <span class="section-label">Journal</span>
+            <h2 class="section-title">Latest Insights</h2>
+        </div>
+        <div class="blog-grid">
+            <a href="#" class="blog-card">
+                <div class="blog-image-wrapper">
+                    <img src="./assets/aura_speaker.png" alt="Spatial Audio" class="blog-image">
+                </div>
+                <div class="blog-meta">
+                    <span class="blog-date">Nov 02, 2025</span>
+                </div>
+                <h3 class="blog-title">The Science Behind Spatial Audio</h3>
+                <p class="blog-excerpt">How we engineered AURA to deliver an expansive soundstage from a single point source.</p>
+            </a>
+            <a href="#" class="blog-card">
+                <div class="blog-image-wrapper">
+                    <img src="./assets/lifestyle_home.png" alt="Speaker Design" class="blog-image">
+                </div>
+                <div class="blog-meta">
+                    <span class="blog-date">Oct 18, 2025</span>
+                </div>
+                <h3 class="blog-title">Why Speaker Design Matters</h3>
+                <p class="blog-excerpt">Exploring the intersection of acoustics and interior design in modern homes.</p>
+            </a>
+            <a href="#" class="blog-card">
+                <div class="blog-image-wrapper">
+                    <img src="./assets/lifestyle_beach.png" alt="AURA Design" class="blog-image">
+                </div>
+                <div class="blog-meta">
+                    <span class="blog-date">Sep 30, 2025</span>
+                </div>
+                <h3 class="blog-title">AURA: Designed by Nature</h3>
+                <p class="blog-excerpt">The fascinating story of how the golden ratio and nautilus shell inspired our flagship product.</p>
+            </a>
+        </div>
+        <div class="blog-actions">
+            <button class="btn btn-secondary">View All Articles</button>
+        </div>
+    </section>
+
+    <!-- 8. FAQ -->
+    <section id="faq" class="faq-section">
+        <div class="section-header">
+            <span class="section-label">Support</span>
+            <h2 class="section-title">Common Questions</h2>
+        </div>
+        <div class="faq-container">
+            <div class="faq-item">
+                <button class="faq-question">
+                    What is the battery life of AURA?
+                    <i class="ph ph-plus"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>AURA features a high-capacity lithium-ion battery that delivers up to 24 hours of continuous playback at moderate volume. A full charge via the included USB-C cable takes approximately 2.5 hours.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    Is AURA waterproof?
+                    <i class="ph ph-plus"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>Yes, AURA is IPX7 certified. This means it is fully waterproof and can be submerged in up to 1 meter of water for 30 minutes, making it perfect for poolside listening or unpredictable weather.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    How do I connect AURA to my device?
+                    <i class="ph ph-plus"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>Simply turn on AURA and hold the Bluetooth button for 3 seconds to enter pairing mode. Select "RISONIC AURA" from your device's Bluetooth settings. AURA supports Bluetooth 5.3 for a stable, high-fidelity connection.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    What's included in the box?
+                    <i class="ph ph-plus"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>The package includes the AURA speaker, a premium braided USB-C charging cable, a quick start guide, and a minimalist protective carrying pouch.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    Do you offer a warranty?
+                    <i class="ph ph-plus"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>Absolutely. Every AURA comes with a comprehensive 2-year manufacturer warranty covering any defects in materials or workmanship.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. CONTACT / CTA FOOTER BANNER -->
+    <section id="cta" class="cta-section">
+        <div class="cta-content">
+            <h2 class="section-title">Ready to Hear the Difference?</h2>
+            <a href="#" class="btn btn-primary btn-large" style="background-color: var(--color-bg-white); color: var(--color-primary);">Buy Now - $299</a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <span class="brand-logo">RISONIC</span>
+                <p class="footer-tagline">Shape of Sound.</p>
+            </div>
+            <div class="footer-links">
+                <a href="#features">Features</a>
+                <a href="#product">Product</a>
+                <a href="#reviews">Reviews</a>
+                <a href="#faq">FAQ</a>
+            </div>
+            <div class="footer-social">
+                <a href="#" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+                <a href="#" aria-label="X (Twitter)"><i class="ph ph-x-logo"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span class="copyright">©2025 RISONIC</span>
+            <div class="legal-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Shipping & Returns</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
