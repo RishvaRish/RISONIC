@@ -113,12 +113,11 @@ document.addEventListener('DOMContentLoaded', () => {
             ease: "power2.inOut"
         }, 0);
 
-        // Parallax the text down and fade it out early
+        // Parallax the text down and fade it out
         heroTl.to('.hero-typography-bg', {
             y: 150,
             opacity: 0,
-            ease: "none",
-            duration: 0.5 // Fades out completely halfway through the scrub
+            ease: "none"
         }, 0);
 
         // Fade out the glass bar and badge early
@@ -127,19 +126,6 @@ document.addEventListener('DOMContentLoaded', () => {
             ease: "none",
             duration: 0.2 // Fades out in the first 20% of the scroll duration
         }, 0);
-
-        // Cinematic Text Section Fade-in & Slide-up
-        gsap.from('.cinematic-text-section', {
-            scrollTrigger: {
-                trigger: '.cinematic-text-section',
-                start: 'top 85%',
-                toggleActions: "play none none reverse"
-            },
-            y: 80,
-            opacity: 0,
-            duration: 1.2,
-            ease: "power3.out"
-        });
 
         // Cinematic Text Scroll Reveal
         gsap.fromTo('.line-left', 
