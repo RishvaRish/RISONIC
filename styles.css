@@ -558,6 +558,344 @@ img {
     }
 }
 
+@media (min-width: 768px) {
+    .ls-image-strip {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ==========================================================================
+   NEW NATURE & EDITORIAL SECTIONS
+   ========================================================================== */
+
+.nature-section {
+    padding: 6rem 2rem;
+    max-width: 1400px;
+    margin: 4rem auto;
+    background-color: #F7F6F2; /* Warm beige */
+    border-radius: 32px;
+}
+
+.nature-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 1.5rem;
+    min-height: 700px;
+}
+
+.nature-card-large {
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    padding: 3rem;
+}
+
+.nature-img-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.nature-card-large:hover .nature-img-bg {
+    transform: scale(1.05);
+}
+
+.nature-card-content {
+    position: relative;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    padding: 2.5rem;
+    border-radius: 16px;
+    max-width: 80%;
+    transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.nature-card-large:hover .nature-card-content {
+    transform: translateY(-5px);
+}
+
+.nature-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: var(--color-text-dark);
+    margin-bottom: 1rem;
+}
+
+.nature-desc {
+    color: var(--color-text-light);
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+.nature-cards-small {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.nature-card-small {
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nature-img-small {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.nature-card-small:hover .nature-img-small {
+    transform: scale(1.08);
+}
+
+.nature-small-title {
+    position: relative;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 1.2rem 2rem;
+    border-radius: 12px;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
+    color: var(--color-text-dark);
+    margin-top: auto;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.nature-card-small:hover .nature-small-title {
+    transform: translateY(-5px);
+}
+
+/* ==========================================================================
+   STORY SECTION (SPLIT SCREEN)
+   ========================================================================== */
+
+.story-section {
+    padding: 8rem 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.story-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+}
+
+.story-image-col {
+    border-radius: 32px;
+    overflow: hidden;
+    height: 650px;
+    position: relative;
+}
+
+.story-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.story-image-col:hover .story-image {
+    transform: scale(1.05);
+}
+
+/* ==========================================================================
+   PRODUCT EXPERIENCE SECTION
+   ========================================================================== */
+
+.experience-section {
+    padding: 6rem;
+    max-width: 1400px;
+    margin: 4rem auto;
+    background-color: #F7F6F2;
+    border-radius: 32px;
+}
+
+.experience-container {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 5rem;
+    margin-bottom: 4rem;
+    align-items: center;
+}
+
+.experience-visual {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.exp-main-image {
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+    border-radius: 24px;
+    transition: opacity 0.4s ease;
+}
+
+.exp-selectors {
+    display: flex;
+    gap: 1rem;
+}
+
+.exp-btn {
+    flex: 1;
+    padding: 1.2rem;
+    background: white;
+    border: 1px solid #E5E5E5;
+    border-radius: 12px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    color: var(--color-text-light);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.exp-btn:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
+.exp-btn.active {
+    background: var(--color-primary);
+    color: white;
+    border-color: var(--color-primary);
+}
+
+.experience-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.exp-price {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-text-dark);
+    margin: 1.5rem 0;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #EAEAEA;
+}
+
+.exp-features {
+    list-style: none;
+    margin-bottom: 3rem;
+    padding-left: 0;
+}
+
+.exp-features li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+    color: var(--color-text-dark);
+    font-weight: 500;
+    font-size: 1.05rem;
+}
+
+.exp-features li i {
+    color: var(--color-primary);
+    font-size: 1.4rem;
+}
+
+.exp-actions {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.exp-info-bar {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    padding-top: 4rem;
+    border-top: 1px solid #EAEAEA;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    color: var(--color-text-light);
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.info-item i {
+    font-size: 1.8rem;
+    color: var(--color-text-dark);
+}
+
+/* Responsive Additions for New Sections */
+@media (max-width: 1024px) {
+    .nature-grid, .story-split, .experience-container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .nature-cards-small {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+    }
+    
+    .nature-card-small {
+        min-height: 250px;
+    }
+
+    .experience-section {
+        padding: 4rem 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .nature-cards-small {
+        grid-template-columns: 1fr;
+    }
+
+    .exp-selectors {
+        flex-direction: column;
+    }
+
+    .exp-actions {
+        flex-direction: column;
+    }
+
+    .exp-info-bar {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .story-image-col, .exp-main-image {
+        height: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    .exp-info-bar {
+        grid-template-columns: 1fr;
+    }
+}
+
 .stat-value {
     font-family: var(--font-display);
     font-size: 2.5rem;

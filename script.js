@@ -172,5 +172,74 @@ document.addEventListener('DOMContentLoaded', () => {
                 clearProps: "all"
             });
         });
+
+        // ==========================================
+        // NEW SECTIONS ANIMATIONS & LOGIC
+        // ==========================================
+
+        // 1. Nature Section Animations
+        const natureCards = gsap.utils.toArray('.nature-card-large, .nature-card-small');
+        natureCards.forEach((card, i) => {
+            gsap.from(card, {
+                scrollTrigger: {
+                    trigger: card,
+                    start: 'top 85%',
+                    toggleActions: "play none none reverse"
+                },
+                y: 60,
+                opacity: 0,
+                duration: 1.2,
+                ease: "power3.out",
+                delay: i * 0.15
+            });
+        });
+
+        // 2. Story Section Reveal
+        gsap.from('.story-image-col', {
+            scrollTrigger: {
+                trigger: '.story-section',
+                start: 'top 80%',
+                toggleActions: "play none none reverse"
+            },
+            x: -50,
+            opacity: 0,
+            duration: 1.2,
+            ease: "power3.out"
+        });
+
+        gsap.from('.story-text-col', {
+            scrollTrigger: {
+                trigger: '.story-section',
+                start: 'top 80%',
+                toggleActions: "play none none reverse"
+            },
+            x: 50,
+            opacity: 0,
+            duration: 1.2,
+            ease: "power3.out",
+            delay: 0.2
+        });
+
+        // 3. Experience Section Image Selector Logic
+        const expButtons = document.querySelectorAll('.exp-btn');
+        const mainImage = document.getElementById('exp-main-image');
+
+        if (expButtons && mainImage) {
+            expButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Remove active class from all
+                    expButtons.forEach(b => b.classList.remove('active'));
+                    // Add active class to clicked
+                    btn.classList.add('active');
+                    
+                    // Fade out, change source, fade in
+                    mainImage.style.opacity = '0';
+                    setTimeout(() => {
+                        mainImage.src = btn.getAttribute('data-src');
+                        mainImage.style.opacity = '1';
+                    }, 400); // 0.4s matches the CSS transition
+                });
+            });
+        }
     }
 });
