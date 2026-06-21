@@ -158,8 +158,16 @@ img {
     width: 100%;
     padding: 2rem 0;
     z-index: 1000;
-    background-color: var(--color-bg-base);
-    transition: padding 0.3s ease;
+    background-color: transparent;
+    transition: all 0.4s ease;
+}
+
+.luxury-nav.scrolled {
+    padding: 1rem 0;
+    background-color: rgba(246, 242, 234, 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
 }
 
 .nav-container {
@@ -202,35 +210,95 @@ img {
 }
 
 /* ==========================================================================
-   SECTION 1: HERO
+   SECTION 1: HERO (Booxia Inspired)
    ========================================================================== */
-.section-hero {
-    min-height: 100vh;
+.booxia-hero {
+    height: 100vh;
     display: flex;
     align-items: center;
     position: relative;
-    padding-top: 5rem;
+    overflow: hidden;
+    background-color: var(--color-bg-base);
 }
 
-.hero-split {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+.booxia-hero::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    width: 80vh;
+    height: 80vh;
+    transform: translateY(-50%);
+    background-image: url('./assets/ammonite_fossil.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.04;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.booxia-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
     align-items: center;
-    gap: 4rem;
 }
 
-.hero-title {
-    font-size: 4.5rem;
-    margin-bottom: 1.5rem;
-    letter-spacing: -0.02em;
+.booxia-content {
+    width: 35%;
+    padding: 0 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 2;
 }
 
-.hero-subtitle {
+.booxia-brand {
+    font-family: var(--font-heading);
     font-size: 1.25rem;
-    max-width: 450px;
-    margin-bottom: 3rem;
+    letter-spacing: 0.2em;
+    color: var(--color-text-secondary);
+    margin-bottom: 2rem;
+    text-transform: uppercase;
 }
 
+.booxia-title {
+    font-size: 4.5rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.03em;
+    color: var(--color-text-primary);
+}
+
+.booxia-subtitle {
+    font-size: 1.125rem;
+    max-width: 400px;
+    margin-bottom: 3rem;
+    color: var(--color-text-secondary);
+}
+
+.booxia-actions {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.booxia-visual {
+    width: 65%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.booxia-speaker {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Keeping hero-actions for CTA section */
 .hero-actions {
     display: flex;
     gap: 1rem;
@@ -238,21 +306,6 @@ img {
 
 .hero-actions.justify-center {
     justify-content: center;
-}
-
-.hero-visual {
-    position: relative;
-    height: 70vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.hero-speaker {
-    max-width: 120%;
-    height: auto;
-    object-fit: contain;
-    filter: drop-shadow(0 30px 40px rgba(0,0,0,0.15));
 }
 
 .scroll-indicator {

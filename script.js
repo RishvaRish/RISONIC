@@ -26,18 +26,30 @@ document.addEventListener("DOMContentLoaded", () => {
     // HERO ANIMATIONS
     // ==========================================
     const heroTl = gsap.timeline();
-    heroTl.from(".hero-title, .hero-subtitle, .hero-actions", {
+    heroTl.from(".booxia-brand, .booxia-title, .booxia-subtitle, .booxia-actions", {
         y: 40,
         opacity: 0,
         duration: 0.8,
         ease: "power3.out",
         stagger: 0.15
-    }).from(".hero-visual", {
+    }).from(".booxia-visual", {
         x: 50,
         opacity: 0,
         duration: 1.2,
         ease: "power3.out"
     }, "-=0.4");
+
+    // ==========================================
+    // NAVBAR SCROLL LISTENER
+    // ==========================================
+    const navbar = document.getElementById("navbar");
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 50) {
+            navbar.classList.add("scrolled");
+        } else {
+            navbar.classList.remove("scrolled");
+        }
+    });
 
     // ==========================================
     // LIFESTYLE HORIZONTAL SCROLL GALLERY
