@@ -25,25 +25,15 @@ document.addEventListener("DOMContentLoaded", () => {
     // ==========================================
     // HERO ANIMATIONS
     // ==========================================
-    const heroTl = gsap.timeline({ delay: 0.2 });
-    heroTl.from(".split-hero-brand, .split-hero-title, .split-hero-subtitle, .split-hero-actions", {
+    const heroTl = gsap.timeline();
+    heroTl.from(".booxia-title, .booxia-subtitle, .booxia-actions", {
         y: 40,
         opacity: 0,
         duration: 1,
         ease: "power3.out",
-        stagger: 0.15
-    }).from(".split-hero-speaker-wrapper", {
-        x: 50,
-        opacity: 0,
-        duration: 1.2,
-        ease: "power3.out"
-    }, "-=0.6").from(".spec-item", {
-        x: 30,
-        opacity: 0,
-        duration: 0.8,
-        ease: "power3.out",
-        stagger: 0.1
-    }, "-=0.8");
+        stagger: 0.2,
+        delay: 0.2
+    });
 
     // ==========================================
     // NAVBAR SCROLL LISTENER
