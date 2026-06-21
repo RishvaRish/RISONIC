@@ -26,18 +26,14 @@ document.addEventListener("DOMContentLoaded", () => {
     // HERO ANIMATIONS
     // ==========================================
     const heroTl = gsap.timeline();
-    heroTl.from(".booxia-brand, .booxia-title, .booxia-subtitle, .booxia-actions", {
+    heroTl.from(".booxia-title, .booxia-subtitle, .booxia-actions", {
         y: 40,
         opacity: 0,
-        duration: 0.8,
+        duration: 1,
         ease: "power3.out",
-        stagger: 0.15
-    }).from(".booxia-visual", {
-        x: 50,
-        opacity: 0,
-        duration: 1.2,
-        ease: "power3.out"
-    }, "-=0.4");
+        stagger: 0.2,
+        delay: 0.2
+    });
 
     // ==========================================
     // NAVBAR SCROLL LISTENER
