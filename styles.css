@@ -263,6 +263,7 @@ img {
     letter-spacing: -0.04em;
     color: #ffffff;
     font-weight: 500;
+    white-space: nowrap;
 }
 
 .booxia-subtitle {
