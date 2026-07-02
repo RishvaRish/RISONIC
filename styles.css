@@ -220,7 +220,7 @@ img {
     align-items: center;
     position: relative;
     overflow: hidden;
-    background-image: url('./assets/final_hero_composition.png');
+    background-image: url('./assets/final_hero_composition.jpg');
     background-size: cover;
     background-position: center 30%;
     background-color: #000;
@@ -248,15 +248,8 @@ img {
     padding: 0 2rem;
 }
 
-.hero-grid {
-    display: grid;
-    grid-template-columns: 48% 52%;
-    height: 100%;
-    align-items: center;
-}
-
 .booxia-content {
-    width: 100%;
+    width: 45%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -266,7 +259,7 @@ img {
     font-family: var(--font-body);
     font-size: 5.5rem;
     line-height: 1.05;
-    margin-bottom: 3rem;
+    margin-bottom: 2.5rem;
     letter-spacing: -0.04em;
     color: #ffffff;
     font-weight: 500;
@@ -275,7 +268,7 @@ img {
 .booxia-subtitle {
     font-size: 1.125rem;
     max-width: 450px;
-    margin-bottom: 5rem;
+    margin-bottom: 4rem;
     color: rgba(255, 255, 255, 0.8);
     line-height: 1.8;
 }
