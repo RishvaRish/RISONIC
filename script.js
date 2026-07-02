@@ -14,10 +14,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 start: "top 85%",
                 toggleActions: "play none none reverse"
             },
-            y: 50,
+            y: 20,
             opacity: 0,
-            duration: 0.8,
-            ease: "power3.out",
+            duration: 1.2,
+            ease: "sine.out",
             stagger: 0.15
         });
     });
@@ -98,8 +98,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // Continuous floating animation
     parallaxElements.forEach(el => {
         gsap.to(el, {
-            y: "-=15",
-            duration: 3,
+            y: "-=8",
+            duration: 4.5,
             ease: "sine.inOut",
             yoyo: true,
             repeat: -1
