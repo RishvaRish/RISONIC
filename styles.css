@@ -565,7 +565,7 @@ img {
    ========================================================================== */
 .section-gallery {
     overflow: hidden;
-    padding: 4rem 0;
+    padding: var(--space-section) 0;
 }
 
 .gallery-wrapper {
@@ -634,7 +634,7 @@ img {
    ========================================================================== */
 .section-cta {
     position: relative;
-    padding: 12rem 0;
+    padding: var(--space-section) 0;
     background: radial-gradient(circle at center, #E6D0A7 0%, var(--color-bg-base) 70%);
     overflow: hidden;
 }
@@ -659,7 +659,7 @@ img {
    FOOTER
    ========================================================================== */
 .luxury-footer {
-    padding: 4rem 0;
+    padding: var(--space-section) 0;
     border-top: 1px solid var(--color-border);
 }
 
