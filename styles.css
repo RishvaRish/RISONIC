@@ -77,7 +77,7 @@ img {
 }
 
 .text-center { text-align: center; }
-.mb-huge { margin-bottom: 6rem; }
+.mb-huge { margin-bottom: 10rem; }
 .mt-normal { margin-top: 1.5rem; }
 .text-sm { font-size: 0.875rem; }
 .color-secondary { color: var(--color-text-secondary); }
