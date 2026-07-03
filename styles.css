@@ -382,8 +382,12 @@ img {
    ========================================================================== */
 .asymmetric-grid {
     display: grid;
-    grid-template-columns: 55% 40%;
+    grid-template-columns: 60% 35%;
     gap: 5%;
+}
+
+#technology .section-title {
+    margin-bottom: 8rem;
 }
 
 .secondary-cards {
