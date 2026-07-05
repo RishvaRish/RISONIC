@@ -741,6 +741,10 @@ img {
     max-width: 480px;
 }
 
+.lifestyle-text-area .section-title {
+    color: #ffffff;
+}
+
 .badge-pill {
     display: inline-flex;
     align-items: center;
