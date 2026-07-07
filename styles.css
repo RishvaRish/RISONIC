@@ -570,7 +570,7 @@ img {
 
 .gallery-wrapper {
     display: flex;
-    width: 300vw; /* 3 items = 300vw */
+    width: 600vw; /* 6 items = 600vw */
     height: 80vh;
 }
 
@@ -578,11 +578,38 @@ img {
     width: 100vw;
     height: 100%;
     padding: 0 4rem;
+    flex-shrink: 0;
 }
 
 .full-cover {
     height: 100%;
     width: 100%;
+    position: relative;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+.gallery-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 4rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
+    color: #ffffff;
+    pointer-events: none;
+}
+
+.gallery-overlay h3 {
+    font-size: var(--font-size-xl);
+    font-family: var(--font-display);
+    margin-bottom: 0.5rem;
+}
+
+.gallery-overlay p {
+    font-size: var(--font-size-base);
+    opacity: 0.9;
+    max-width: 600px;
 }
 
 /* ==========================================================================
