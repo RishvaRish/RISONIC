@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // ==========================================
     // GLOBAL REVEALS (Fade-ups)
     // ==========================================
-    const revealElements = gsap.utils.toArray('.section-editorial, .section-dark, .feature-card, .material-card, .testimonial-card, .ownership-item');
+    const revealElements = gsap.utils.toArray('.section-editorial, .section-dark, .feature-card, .material-card, .testimonial-card, .ownership-item, .closing-content');
     
     revealElements.forEach((el) => {
         gsap.from(el, {
@@ -16,9 +16,9 @@ document.addEventListener("DOMContentLoaded", () => {
             },
             y: 20,
             opacity: 0,
-            duration: 1.2,
-            ease: "sine.out",
-            stagger: 0.15
+            duration: 1.4,
+            ease: "power3.out",
+            stagger: 0.2
         });
     });
 
@@ -29,10 +29,10 @@ document.addEventListener("DOMContentLoaded", () => {
     heroTl.from(".booxia-title, .booxia-subtitle, .booxia-actions", {
         y: 40,
         opacity: 0,
-        duration: 1,
+        duration: 1.5,
         ease: "power3.out",
-        stagger: 0.2,
-        delay: 0.2
+        stagger: 0.25,
+        delay: 0.3
     });
 
     // ==========================================
