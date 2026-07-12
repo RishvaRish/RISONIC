@@ -24,7 +24,7 @@
     --shadow-hover: 0 20px 50px rgba(27, 27, 27, 0.08);
     
     /* Spacing */
-    --space-section: 10rem;
+    --space-section: 100px;
     --container-width: 1400px;
 }
 
@@ -77,7 +77,7 @@ img {
 }
 
 .text-center { text-align: center; }
-.mb-huge { margin-bottom: 10rem; }
+.mb-large { margin-bottom: 3rem; }
 .mt-normal { margin-top: 1.5rem; }
 .text-sm { font-size: 0.875rem; }
 .color-secondary { color: var(--color-text-secondary); }
@@ -361,6 +361,14 @@ img {
 .section-desc {
     font-size: 1.125rem;
     max-width: 500px;
+    margin-bottom: 3rem;
+}
+
+.price-text {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--color-text-primary);
+    margin-bottom: 3rem;
 }
 
 .image-wrapper {
