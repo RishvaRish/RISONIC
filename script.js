@@ -81,22 +81,49 @@ document.addEventListener("DOMContentLoaded", () => {
     // LIFESTYLE HORIZONTAL SCROLL GALLERY
     // ==========================================
     const galleryContainer = document.getElementById("gallery-pin-container");
-    if (galleryContainer && window.innerWidth > 1024) {
+    if (galleryContainer) {
         const wrapper = document.querySelector(".gallery-wrapper");
         
-        // Calculate the amount to scroll to the left
-        // The wrapper width is 300vw, so we move it by -200vw to see the 3rd item
-        const scrollAmount = wrapper.scrollWidth - window.innerWidth;
+        let mm = gsap.matchMedia();
+        mm.add("(min-width: 1025px)", () => {
+            const scrollAmount = wrapper.scrollWidth - window.innerWidth;
+            gsap.to(wrapper, {
+                x: -scrollAmount,
+                ease: "none",
+                scrollTrigger: {
+                    trigger: galleryContainer,
+                    pin: true,
+                    scrub: 1,
+                    end: () => "+=" + scrollAmount
+                }
+            });
+        });
+    }
 
-        gsap.to(wrapper, {
-            x: -scrollAmount,
-            ease: "none",
-            scrollTrigger: {
-                trigger: galleryContainer,
-                pin: true,
-                scrub: 1,
-                end: () => "+=" + scrollAmount
-            }
+    // ==========================================
+    // MOBILE MENU LOGIC
+    // ==========================================
+    const mobileMenuToggle = document.querySelector(".mobile-menu-toggle");
+    const mobileMenuOverlay = document.getElementById("mobileMenu");
+    const mobileMenuClose = document.getElementById("mobileMenuClose");
+    const mobileLinks = document.querySelectorAll(".mobile-link");
+
+    if (mobileMenuToggle && mobileMenuOverlay && mobileMenuClose) {
+        mobileMenuToggle.addEventListener("click", () => {
+            mobileMenuOverlay.classList.add("active");
+            document.body.style.overflow = "hidden"; // lock scroll
+        });
+
+        mobileMenuClose.addEventListener("click", () => {
+            mobileMenuOverlay.classList.remove("active");
+            document.body.style.overflow = ""; // unlock scroll
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener("click", () => {
+                mobileMenuOverlay.classList.remove("active");
+                document.body.style.overflow = ""; // unlock scroll
+            });
         });
     }
 
