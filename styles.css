@@ -947,6 +947,25 @@ img {
     margin-right: auto;
 }
 
+.closing-content .btn-primary {
+    background-color: #ffffff;
+    color: var(--color-text-primary);
+}
+
+.closing-content .btn-primary:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.closing-content .btn-outline {
+    border-color: rgba(255, 255, 255, 0.5);
+    color: #ffffff;
+}
+
+.closing-content .btn-outline:hover {
+    background-color: #ffffff;
+    color: var(--color-text-primary);
+}
+
 /* ==========================================================================
    10. PREMIUM FOOTER
    ========================================================================== */
