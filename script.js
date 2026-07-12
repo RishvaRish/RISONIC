@@ -50,13 +50,19 @@ document.addEventListener("DOMContentLoaded", () => {
         } else {
             navbar.classList.remove("scrolled");
         }
+    });
 
-        sections.forEach(current => {
-            const sectionHeight = current.offsetHeight;
-            const sectionTop = current.offsetTop - 150; // offset for navbar
-            const sectionId = current.getAttribute("id");
-            
-            if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+    // IntersectionObserver for robust Scroll Spy
+    const observerOptions = {
+        root: null,
+        rootMargin: "-45% 0px -45% 0px", // Triggers when a section is occupying the middle of the viewport
+        threshold: 0
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const sectionId = entry.target.getAttribute("id");
                 navLinks.forEach(link => {
                     link.classList.remove("active");
                     if (link.getAttribute("href") === "#" + sectionId) {
@@ -65,6 +71,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 });
             }
         });
+    }, observerOptions);
+
+    sections.forEach(section => {
+        observer.observe(section);
     });
 
     // ==========================================
