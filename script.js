@@ -36,15 +36,35 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // ==========================================
-    // NAVBAR SCROLL LISTENER
+    // NAVBAR SCROLL LISTENER & SCROLL SPY
     // ==========================================
     const navbar = document.getElementById("navbar");
+    const sections = document.querySelectorAll("section[id]");
+    const navLinks = document.querySelectorAll(".nav-links a");
+
     window.addEventListener("scroll", () => {
-        if (window.scrollY > 50) {
+        const scrollY = window.scrollY;
+        
+        if (scrollY > 50) {
             navbar.classList.add("scrolled");
         } else {
             navbar.classList.remove("scrolled");
         }
+
+        sections.forEach(current => {
+            const sectionHeight = current.offsetHeight;
+            const sectionTop = current.offsetTop - 150; // offset for navbar
+            const sectionId = current.getAttribute("id");
+            
+            if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+                navLinks.forEach(link => {
+                    link.classList.remove("active");
+                    if (link.getAttribute("href") === "#" + sectionId) {
+                        link.classList.add("active");
+                    }
+                });
+            }
+        });
     });
 
     // ==========================================

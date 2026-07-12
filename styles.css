@@ -200,7 +200,8 @@ img {
     font-weight: 500;
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.nav-links a.active {
     color: var(--color-accent);
 }
 
