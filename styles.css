@@ -223,7 +223,7 @@ img {
     overflow: hidden;
     background-image: url('./assets/final_hero_composition.jpg');
     background-size: cover;
-    background-position: center 30%;
+    background-position: right center;
     background-color: #000;
 }
 
