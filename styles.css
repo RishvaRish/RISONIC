@@ -260,7 +260,7 @@ img {
     font-family: var(--font-body);
     font-size: 5.5rem;
     line-height: 1.05;
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.5rem;
     letter-spacing: -0.04em;
     color: #ffffff;
     font-weight: 500;
@@ -270,7 +270,7 @@ img {
 .booxia-subtitle {
     font-size: 1.125rem;
     max-width: 450px;
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
     color: rgba(255, 255, 255, 0.8);
     line-height: 1.8;
 }
@@ -416,7 +416,7 @@ img {
 
 .card-title {
     font-size: 1.5rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
 }
 
 .card-desc {
@@ -672,7 +672,7 @@ img {
     text-transform: uppercase;
     letter-spacing: 0.1em;
     color: var(--color-text-primary);
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
@@ -700,7 +700,7 @@ img {
     font-size: 1.125rem;
     font-weight: 600;
     color: var(--color-text-primary);
-    margin-bottom: 0.75rem;
+    margin-bottom: 1rem;
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -834,7 +834,7 @@ img {
     background-color: rgba(255, 255, 255, 0.1);
     border-color: rgba(255, 255, 255, 0.2);
     color: #fff;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .closing-content .badge-dot {
@@ -896,13 +896,14 @@ img {
     line-height: 1.5;
 }
 
-.footer-heading {
+.footer-col h4 {
+    font-family: var(--font-body);
     font-size: 0.875rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     color: var(--color-text-primary);
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 .footer-col ul {
@@ -1056,7 +1057,7 @@ img {
 /* Mobile (Max 767px) */
 @media (max-width: 767px) {
     :root {
-        --space-section: 60px;
+        --space-section: 64px;
     }
     
     .booxia-title {
