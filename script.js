@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // ==========================================
     const navbar = document.getElementById("navbar");
     const sections = document.querySelectorAll("section[id]");
-    const navLinks = document.querySelectorAll(".nav-links a");
+    const navLinks = document.querySelectorAll(".nav-links a, .mobile-nav-links a");
 
     window.addEventListener("scroll", () => {
         const scrollY = window.scrollY;
