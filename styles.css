@@ -585,9 +585,9 @@ img {
 
 .gallery-item {
     width: 100vw;
+    flex-shrink: 0;
     height: 100%;
     padding: 0 4rem;
-    flex-shrink: 0;
 }
 
 .full-cover {
