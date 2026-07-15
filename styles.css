@@ -1130,3 +1130,136 @@ img {
         padding: 1.5rem;
     }
 }
+
+/* ==========================================================================
+   11. PREMIUM SPECS GRID
+   ========================================================================== */
+.specs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 3rem 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    padding-top: 3rem;
+}
+
+.spec-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.spec-label {
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-text-secondary);
+    font-weight: 600;
+}
+
+.spec-value {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    color: var(--color-text-primary);
+    line-height: 1.4;
+}
+
+/* ==========================================================================
+   12. TRUST & OWNERSHIP
+   ========================================================================== */
+.trust-section {
+    padding: var(--space-section) 2rem;
+    background-color: var(--color-bg-alt);
+    text-align: center;
+}
+
+.trust-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+    opacity: 0.5;
+    margin-top: 2rem;
+}
+
+.trust-logo {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+}
+
+.ownership-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.ownership-card {
+    padding: 2rem;
+    background-color: var(--color-bg);
+    border-radius: var(--radius-lg);
+    text-align: center;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.ownership-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--color-text-primary);
+}
+
+/* ==========================================================================
+   13. FAQ ACCORDION
+   ========================================================================== */
+.faq-container {
+    max-width: 700px;
+    margin: 4rem auto 0;
+}
+
+details.faq-item {
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding: 1.5rem 0;
+}
+
+summary.faq-question {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    cursor: pointer;
+    list-style: none;
+    position: relative;
+    padding-right: 2rem;
+}
+
+summary.faq-question::-webkit-details-marker {
+    display: none;
+}
+
+summary.faq-question::after {
+    content: '+';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    font-weight: 400;
+    transition: transform 0.3s ease;
+}
+
+details.faq-item[open] summary.faq-question::after {
+    content: '-';
+}
+
+.faq-answer {
+    margin-top: 1rem;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    font-size: 1rem;
+}
