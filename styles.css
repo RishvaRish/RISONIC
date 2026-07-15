@@ -579,7 +579,7 @@ img {
 
 .gallery-wrapper {
     display: flex;
-    width: 300vw; /* 3 items = 300vw */
+    width: max-content;
     height: 80vh;
 }
 
@@ -587,6 +587,7 @@ img {
     width: 100vw;
     height: 100%;
     padding: 0 4rem;
+    flex-shrink: 0;
 }
 
 .full-cover {

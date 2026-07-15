@@ -86,15 +86,15 @@ document.addEventListener("DOMContentLoaded", () => {
         
         let mm = gsap.matchMedia();
         mm.add("(min-width: 1025px)", () => {
-            const scrollAmount = wrapper.scrollWidth - window.innerWidth;
             gsap.to(wrapper, {
-                x: -scrollAmount,
+                x: () => -(wrapper.scrollWidth - window.innerWidth),
                 ease: "none",
                 scrollTrigger: {
                     trigger: galleryContainer,
                     pin: true,
                     scrub: 1,
-                    end: () => "+=" + scrollAmount
+                    invalidateOnRefresh: true,
+                    end: () => "+=" + (wrapper.scrollWidth - window.innerWidth)
                 }
             });
         });
