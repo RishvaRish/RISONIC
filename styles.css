@@ -1263,3 +1263,49 @@ details.faq-item[open] summary.faq-question::after {
     line-height: 1.6;
     font-size: 1rem;
 }
+/* ==========================================================================
+   14. COMPARISON TABLE
+   ========================================================================== */
+.comparison-container {
+    max-width: 1000px;
+    margin: 4rem auto 0;
+    overflow-x: auto;
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.comparison-table th, .comparison-table td {
+    padding: 1.5rem;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.comparison-table th {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 1.25rem;
+    color: var(--color-text-primary);
+}
+
+.comparison-table th.highlight {
+    color: var(--color-text-primary);
+    background-color: rgba(201, 166, 107, 0.05);
+}
+
+.comparison-table td {
+    color: var(--color-text-secondary);
+    font-size: 1rem;
+}
+
+.comparison-table td.highlight {
+    font-weight: 500;
+    color: var(--color-text-primary);
+    background-color: rgba(201, 166, 107, 0.05);
+}
+
+.comparison-table tr:last-child td {
+    border-bottom: none;
+}

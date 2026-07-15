@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // ==========================================
     // GLOBAL REVEALS (Fade-ups)
     // ==========================================
-    const revealElements = gsap.utils.toArray('.section-editorial, .section-dark, .feature-card, .material-card, .testimonial-card, .ownership-item');
+    const revealElements = gsap.utils.toArray('.section-editorial, .section-dark, .feature-card, .material-card, .testimonial-card, .ownership-card, .trust-section, .faq-item');
     
     revealElements.forEach((el) => {
         gsap.from(el, {
