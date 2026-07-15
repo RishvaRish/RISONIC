@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // ==========================================
     // GLOBAL REVEALS (Fade-ups)
     // ==========================================
-    const revealElements = gsap.utils.toArray('.section-editorial, .section-dark, .feature-card, .material-card, .testimonial-card, .ownership-card, .trust-section, .faq-item');
+    const revealElements = gsap.utils.toArray('.section-editorial, .section-dark, .feature-card, .material-card, .testimonial-card, .faq-item');
     
     revealElements.forEach((el) => {
         gsap.from(el, {
@@ -198,6 +198,32 @@ document.addEventListener("DOMContentLoaded", () => {
                     gsap.to(mainImg, { opacity: 1, duration: 0.4, ease: "power2.inOut" });
                 }
             });
+        });
+    });
+
+    // ==========================================
+    // FAQ ACCORDION LOGIC
+    // ==========================================
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        const answerWrapper = item.querySelector('.faq-answer-wrapper');
+
+        question.addEventListener('click', () => {
+            const isActive = item.classList.contains('active');
+
+            // Close all other accordions
+            faqItems.forEach(otherItem => {
+                otherItem.classList.remove('active');
+                otherItem.querySelector('.faq-answer-wrapper').style.maxHeight = null;
+            });
+
+            // Toggle current
+            if (!isActive) {
+                item.classList.add('active');
+                answerWrapper.style.maxHeight = answerWrapper.scrollHeight + "px";
+            }
         });
     });
 });
