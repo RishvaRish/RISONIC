@@ -16,9 +16,9 @@ document.addEventListener("DOMContentLoaded", () => {
             },
             y: 20,
             opacity: 0,
-            duration: 1.2,
-            ease: "sine.out",
-            stagger: 0.15
+            duration: 0.8,
+            ease: "power2.out",
+            stagger: 0.2
         });
     });
 
@@ -27,10 +27,10 @@ document.addEventListener("DOMContentLoaded", () => {
     // ==========================================
     const heroTl = gsap.timeline();
     heroTl.from(".booxia-title, .booxia-subtitle, .booxia-actions", {
-        y: 40,
+        y: 20,
         opacity: 0,
-        duration: 1,
-        ease: "power3.out",
+        duration: 0.8,
+        ease: "power2.out",
         stagger: 0.2,
         delay: 0.2
     });
@@ -86,15 +86,15 @@ document.addEventListener("DOMContentLoaded", () => {
         
         let mm = gsap.matchMedia();
         mm.add("(min-width: 1025px)", () => {
+            const scrollAmount = wrapper.scrollWidth - window.innerWidth;
             gsap.to(wrapper, {
-                x: () => -(wrapper.scrollWidth - window.innerWidth),
+                x: -scrollAmount,
                 ease: "none",
                 scrollTrigger: {
                     trigger: galleryContainer,
                     pin: true,
                     scrub: 1,
-                    invalidateOnRefresh: true,
-                    end: () => "+=" + (wrapper.scrollWidth - window.innerWidth)
+                    end: () => "+=" + scrollAmount
                 }
             });
         });
